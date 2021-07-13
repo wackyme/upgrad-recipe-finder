@@ -1,4 +1,4 @@
-.recipeData {
+.recipeContent {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -10,11 +10,19 @@
     background-color: #f8eed4;
     color: #6b526b;
     text-align: center;
-    padding: 10px;
-    margin: 0;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.recipeData img {
+.title>h1 {
+    flex: 1;
+}
+
+.recipeContent img {
     height: 350px;
     width: 350px;
     border: 2px solid black;

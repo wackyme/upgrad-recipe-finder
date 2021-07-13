@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import "./css/recipe-model.css";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Favorite from '@material-ui/icons/Favorite';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 
 class RecipeModel extends Component {
   constructor(props) {
@@ -15,7 +19,7 @@ class RecipeModel extends Component {
       "https://www.themealdb.com/api/json/v1/1/search.php?s=" +
         this.props.foodItem
     );
-    if (this.props.foodItem === "") alert("Enter a Dish!!");
+    if (this.props.foodItem === "") alert("Enter the Name of the Dish");
     else {
       Axios.get(
         "https://www.themealdb.com/api/json/v1/1/search.php?s=" +
@@ -31,7 +35,7 @@ class RecipeModel extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.foodItem !== prevProps.foodItem) {
-      if (this.props.foodItem === "") alert("Enter a Dish!!");
+      if (this.props.foodItem === "") alert("Enter the Name of the Dish");
       else {
         Axios.get(
           "https://www.themealdb.com/api/json/v1/1/search.php?s=" +
@@ -65,11 +69,16 @@ class RecipeModel extends Component {
 
     const id =
       meal !== null && meal.length > 0 ? (
-        <div className="recipeContainer">
+        <div className="recipePage">
           <div className="title">
             <h1>{meal[0].strMeal}</h1>
+            <FormControlLabel
+                  control={<Checkbox icon={<FavoriteBorder />} 
+                  checkedIcon={<Favorite />}
+                  name="checkedH" />}
+            ></FormControlLabel>
           </div>
-          <div className="recipeData">
+          <div className="recipeContent">
             <img
               src={meal[0].strMealThumb}
               alt={"Your meal for " + meal[0].strMeal}

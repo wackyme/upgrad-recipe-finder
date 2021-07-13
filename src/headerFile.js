@@ -30,7 +30,7 @@ class HeaderForm extends Component {
           <form className="input-form">
             <input
               type="text"
-              placeholder="Enter the name of the dish"
+              placeholder="Enter the Name of the Dish"
               id="text"
             />
             <input

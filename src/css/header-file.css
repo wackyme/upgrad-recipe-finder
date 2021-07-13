@@ -10,7 +10,7 @@
 
 .heading {
     font-size: 3rem;
-    color: #222;
+    color: #6b526b;
 }
 
 .input-form {
@@ -27,6 +27,7 @@
     font-size: 1.2rem;
     top: 3px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .input-form input[type="text"]:focus {

@@ -3,12 +3,10 @@ import "./App.css";
 import HeaderForm from "./headerFile";
 
 function App() {
-    return ( <
-        div >
-        <
-        HeaderForm / >
-        <
-        /div>
+    return ( <div>
+        
+        <HeaderForm / >
+        </div>
     );
 }
 

@@ -27,14 +27,14 @@
     height: 200px;
     overflow: auto;
     padding: 5px 30px;
-    background-color: rgba(217, 216, 236, 255);
+    background-color: #d7d0d0;
     margin: 2px 1px 10px;
     list-style-type: none;
 }
 
 .recipe {
     height: 200px;
-    background-color: rgba(217, 216, 236, 255);
+    background-color: #d7d0d0;
     padding: 10px 20px;
     overflow: auto;
 }

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.header-container {
+.header-slot {
     text-align: center;
 }
 
@@ -42,6 +42,6 @@
     cursor: pointer;
 }
 
-.center {
+.text-position {
     text-align: center;
 }

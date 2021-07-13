@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./css/header-form.css";
-import RecipeBody from "./RecipeBody";
+import RecipeModel from "./RecipeBody";
 
 class HeaderForm extends Component {
     constructor(props) {
@@ -24,37 +24,36 @@ class HeaderForm extends Component {
 
     render() {
         return ( <
-                div >
-                <
-                div className = "header-cont" >
-                <
-                h1 className = "heading" > Recipe Finder < /h1> <
-                form className = "input-form" >
-                <
-                input type = "text"
-                placeholder = "Enter the name of the dish"
-                id = "text" /
-                >
-                <
-                input type = "submit"
-                value = "Get Ingredients"
-                onClick = { this.getRecipe }
-                /> < /
-                form > <
-                /div> {
+            div >
+            <
+            div className = "header-slot" >
+            <
+            h1 className = "heading" > Recipe Finder < /h1> <
+            form className = "input-form" >
+            <
+            input type = "text"
+            placeholder = "Enter the name of the dish"
+            id = "text" /
+            >
+            <
+            input type = "submit"
+            value = "Get Ingredients"
+            onClick = { this.getRecipe }
+            /> <
+            /form> <
+            /div> {
                 this.state.searched ? ( <
-                    RecipeContent recipe = { this.state.recipe }
+                    RecipeModel foodItem = { this.state.foodItem }
                     />
                 ) : ( <
-                    h2 className = "center" >
+                    h2 className = "text-position" >
                     Type a Dish Name to search
                     for its ingredients <
                     /h2>
                 )
             } <
             /div>
-    );
+        );
+    }
 }
-}
-
-export default Header;
+export default HeaderForm;

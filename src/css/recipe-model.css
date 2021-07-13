@@ -7,13 +7,11 @@
 }
 
 .title {
-    background-color: rgb(146, 145, 229);
-    color: #eee;
+    background-color: #f8eed4;
+    color: #6b526b;
     text-align: center;
     padding: 10px;
-    margin: 5px 0;
-    border-style: solid;
-    border-radius: 20px;
+    margin: 0;
 }
 
 .recipeData img {
